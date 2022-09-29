@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab1web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="page-header">
+
+    <div id="headers">
+        <h1>Канукова Ева, P32302</h1>
+        <h2>Вариант 3208</h2>
+    </div>
+
+    <div id="header-cats">
+        <img src="src/kitty1.gif" class="kitties" width="140" height="110" alt="" hidden>
+        <img src="src/kitty2.gif" class="kitties" width="140" height="110" alt="" hidden>
+        <img src="src/kitty3.gif" class="kitties" width="140" height="110" alt="" hidden>
+        <img src="src/kitty4.gif" class="kitties" width="140" height="110" alt="" hidden>
+    </div>
+
+</div>
+
+<div id="page-container">
+
+    <div id="form-block">
+
+        <div id="graph">
+            <img src="src/graph.jpg" width="280" height="260" alt="">
+        </div>
+
+        <div id="input-box">
+            <form action="php/check_point.php" method="get">
+                <p>
+                    <label for="select-x">Select X</label>
+                    <select id="select-x" name="x">
+                        <option>-3</option>
+                        <option>-2</option>
+                        <option>-1</option>
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="input-y">Type Y</label>
+                    <input type="text" id="input-y" name="y" placeholder="from -3 to 5" required>
+                </p>
+
+                <p id="y-warning" class="important" hidden>You should enter the number in (-3; 5)</p>
+
+                <p>
+                    <label for="select-r">Select R</label>
+                    <select id="select-r" name="r">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </p>
+
+                <p>
+                    <button type="submit" id="check-button">Check</button>
+                    <button type="button" id="clear-button">Clear</button>
+                </p>
+            </form>
+            <img id="clear-animation" src="src/clear-moment.gif" width="130" height="100" alt="" hidden>
+        </div>
+    </div>
+
+    <div id="table-block">
+        <table id="result-table">
+            <tr>
+                <th>№</th>
+                <th>X</th>
+                <th>Y</th>
+                <th>R</th>
+                <th>Result</th>
+                <th>Attempt time</th>
+                <th>Processing time</th>
+            </tr>
+        </table>
+    </div>
+
+</div>
+<script src="js/jquery-3.6.1.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/table.js"></script>
+<script src="js/animation.js"></script>
+</body>
+</html>
